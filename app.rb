@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative 'config/environment'
 
 class App < Sinatra::Base
 
@@ -10,7 +11,7 @@ class App < Sinatra::Base
     erb :newteam
   end
 
-  post '/newteam' do
+  post '/team' do
     @team = Team.new(params[:name], params[:coach], params[:pg], params[:sg], params[:pf], params[:sf], params[:c])
     erb :team
   end
