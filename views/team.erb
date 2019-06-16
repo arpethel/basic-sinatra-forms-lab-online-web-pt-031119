@@ -6,12 +6,19 @@
  </head>
  <body>
 
-   <h1>The Basketball Team</h1>
+   <h1>Your Basketball Team</h1>
 
     <!--   Use ERB tags to bring in an instance variable containing the reversed string -->
     <% @team.each do |member| %>
-      <h2><%= member %></h2>
+      <p>Coach: <%= member.c %></p>
     <% end %>
+
+    <h1>Team Name: <%= @team.name %></h1>
+    <p>Point Guard: <%= @team.pg %></p>
+    <p>Shooting Guard: <%= @team.sg %></p>
+    <p>Small Forward: <%= @team.sf %></p>
+    <p>Power Forward: <%= @team.pf %></p>
+    <p>Center: <%= @team.c %></p>
 
  </body>
 </html>
