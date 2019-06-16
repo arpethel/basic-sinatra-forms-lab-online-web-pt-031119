@@ -7,7 +7,7 @@ class App < Sinatra::Base
     erb :index
   end
 
-  get '/newteam' do
+  get '/new' do
     erb :newteam
   end
 
