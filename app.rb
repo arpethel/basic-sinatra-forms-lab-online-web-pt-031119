@@ -2,9 +2,9 @@ require 'sinatra/base'
 
 class App < Sinatra::Base
 
-  # get '/' do
-  #   erb :index
-  # end
+  get '/' do
+    erb :index
+  end
 
   get '/newteam' do
     erb :newteam
@@ -12,8 +12,6 @@ class App < Sinatra::Base
 
   post '/newteam' do
     @team = Team.new(params[:name], params[:coach], params[:pg], params[:sg], params[:pf], params[:sf], params[:c])
-    # original_string = params["string"]
-
     erb :team
   end
 
